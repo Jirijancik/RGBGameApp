@@ -1,37 +1,40 @@
 <head>
- 
+
     <title>RGB</title>
-	<link rel="stylesheet" type="text/css" href="resources/RGB.css">
-    
+    <link rel="stylesheet" type="text/css" href="resources/RGB.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,900|Roboto:100,300,900" rel="stylesheet">
 </head>
+
 <body>
-    <div id="title-container">
-        <h1>The Great  <span id="colorDisplay">RGB</span> color game!</h1>
+    <div class="title-container noselect">
+        <h1>The Great<br><span class="title-container__color-display">RGB</span><br>color game!</h1>
     </div>
-    
-    <div id="header-container">
-        <div class="header-cell button button-new-collors" type="button" onclick="appRestart()">New Colors</div>
-        <div class="header-cell"><h2><span id="tryAgain">XXXXXXX</span></h2></div>
-        <div class="header-cell button button-easy" type="button">Easy</div>
-        <div class="header-cell button button-hard" type="button">Hard</div>        
+
+    <div class="header-container noselect">
+        <div class="header-container__button header-container__button--new-collors" type="button" onclick="appRestart()">New Colors</div>
+        <div>
+            <h2 class="header-container__try-again"><span></span></h2>
+        </div>
+        <div class="header-container__button header-container__button--easy " type="button">Easy</div>
+        <div class="header-container__button header-container__button--hard header-container__button--focused" type="button">Hard</div>
     </div>
-    
-  
+
+
     <div id="main-container">
 
-        <div class="square square1"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
+        <div class="main-container__square"></div>
+        <div class="main-container__square"></div>
+        <div class="main-container__square"></div>
+        <div class="main-container__square"></div>
+        <div class="main-container__square"></div>
+        <div class="main-container__square"></div>
 
     </div>
 
 
-  
-  
-  <script type="text/javascript" src="resources/RGB.js"></script>
-  
-  
+
+
+    <script type="text/javascript" src="resources/RGB.js"></script>
+
+
 </body>

@@ -1,65 +1,131 @@
-body{
-    background-color: #232323;
-}
-.square{
-border-radius: 10px;    
-min-width: 150px;
-    max-width: 200px;
-}
+/*CSS VARIABLES FOR THE ROOT ELEMENT*/
+:root{
+    /*BODY VARIABLES*/
+   --border-color: var(--main-body-color);
+   --main-body-color: #232323;
+   --main-body-font: 'Roboto', 'Montserrat';
 
-#title-container{
+    /*TITLE-CONTAINER VARIABLES*/
+   --title-container-color: #f5f5dc;
+   --title-container-background-color: #3d5585;
+
+    /*HEADER COINTAINER VARIABLES*/
+   --header-container-background-color: #f5f5dc;
+   --header-container__button-color: #3d5585;
+   --header-container__button--hover-background-color: #5583d1;
+   --header-container__button--hover-color: #060b14;
+   }
    
+   
+
+   /*BODY SECTION*/
+   body {
+    background-color: var(--main-body-color);
+    font-family: var(--main-body-font);
+    margin: 0;
+    padding: 0;
+   }
+   
+   
+   
+   /*TITLE COINTAINER*/
+   .title-container {
+    background-color: var(--title-container-background-color);
+    border: var(--border-color) solid 1px;
+    color: var(--header-container-background-color);
+    font-weight: 100;
+    line-height: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px --title-container-color;
     text-transform: uppercase;
     text-align: center;
-    border: black solid 1px;
-    text-shadow: 2px 2px #000;
-}
-
-#header-container{
+   }
+   
+   .title-container__color-display {
+    font-size: 60px;
+    font-weight: 600;
+   }
+   
+   
+   
+   /*HEADER COINTAINER*/
+   .header-container {
+    background-color: var(--header-container-background-color);
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr;
-    margin: 0;
-    margin-bottom: 80px;
-    height: 2.3rem;
     grid-template: 1/1;
-    background-color: beige;
-}
-
-.button{
-    padding-top: 0.6rem;
-    text-align: center;
-    background: #c0c9d8;
-    text-transform: uppercase;
-    outline:2px solid #2e3033;
-}
-
-.button:hover{
-    padding-top: 0.6rem;
-    text-align: center;
-    background: #5583d1;
-    text-transform: uppercase;
-    outline:3px solid #242526;
-}
-
-#tryAgain{
-    padding-top: 0.6rem;
-    text-align: center;
+    height: 2.3rem;
     margin: 0;
-    font-size: 1rem; 
-}
-
-#main-container{
-    grid-gap: 3%;
-    margin: 0% 25%;
+    margin-bottom: 10px !important;
+    text-transform: uppercase;
+    text-align: center;
+   }
+   
+   .header-container__try-again{
+    font-size: 1.1rem;
+    margin-top: 1%;
+    margin-right: -32%;
+   }
+   
+   .header-container__button {
+    align-items: center;
+    color: var(--header-container__button-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    height: 2rem;
+    letter-spacing: 2px;
+    padding-top: 0.3rem;
+    transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -webkit-transition: all 0.35s;
+   }
+   
+   .header-container__button:hover {
+    background: var(--header-container__button--hover-background-color);
+    cursor: pointer;
+    color: var(--header-container__button--hover-color);
+   }
+   
+   .header-container__button--focused {
+    background: var(--header-container__button--hover-background-color);
+    color: var(--header-container-background-color);
+    outline: 2px solid var(--border-color);
+    padding-top: 0.3rem;
+   }
+   
+   
+   
+   /*MAIN COINTAINER*/
+   #main-container {
     display: grid;
+    grid-gap: 3%;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 150px 150px 150px;
-    
-/*
-    max-width: 600px;
-    margin: 0 auto;
-*/
-}
-h1{
-    color: white;
-}
+    grid-template-rows: 13rem 13rem 13rem;
+    margin: 5% 30%;
+   }
+   
+   .main-container__square {
+    cursor: pointer;
+    border-radius: 15%;
+    max-width: 16rem;
+    min-width: 12rem;
+    transition: background 0.25s;
+    -moz-transition: background 0.25s;
+    -webkit-transition: background 0.25s;
+   }
+   
+   
+      
+   /*ADDITIONAL MODIFIERS*/
+   .hidden {
+    display: none;
+   }
+   
+   .noselect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none; 
+   }
